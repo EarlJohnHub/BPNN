@@ -14,10 +14,12 @@ namespace BPNN
     public partial class Form1 : Form
     {
         NeuralNet nn;
-
+        private const int MAX_EPOCH = 1000;
+        private int training_count = 0;
         public Form1()
         {
             InitializeComponent();
+            epoch_numeric.Maximum = MAX_EPOCH;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -36,9 +38,15 @@ namespace BPNN
 
         private void train_nn_Click(object sender, EventArgs e)
         {
+            if (nn == null) return;
+
+            training_count++;
+            training_count_text.Text = "" + training_count;
+
+            int num_epoch = (int)epoch_numeric.Value;
 
             // 4 input AND
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < num_epoch; i++)
             {
                 // 0, 0, 0, 0
                 nn.setInputs(0, 0.0);

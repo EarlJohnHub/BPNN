@@ -41,6 +41,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.training_count_text = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.epoch_numeric = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.epoch_numeric)).BeginInit();
             this.SuspendLayout();
             // 
             // first_input
@@ -153,11 +159,59 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Input 1";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(85, 389);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 16);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Training Count:";
+            // 
+            // training_count_text
+            // 
+            this.training_count_text.AutoSize = true;
+            this.training_count_text.Location = new System.Drawing.Point(188, 389);
+            this.training_count_text.Name = "training_count_text";
+            this.training_count_text.Size = new System.Drawing.Size(14, 16);
+            this.training_count_text.TabIndex = 15;
+            this.training_count_text.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(323, 389);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 16);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Epoch:";
+            // 
+            // epoch_numeric
+            // 
+            this.epoch_numeric.Location = new System.Drawing.Point(379, 389);
+            this.epoch_numeric.Name = "epoch_numeric";
+            this.epoch_numeric.Size = new System.Drawing.Size(100, 22);
+            this.epoch_numeric.TabIndex = 17;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(379, 418);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 16);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Limit: 1000";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 514);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.epoch_numeric);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.training_count_text);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -173,6 +227,7 @@
             this.Controls.Add(this.first_input);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.epoch_numeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,6 +248,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label training_count_text;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown epoch_numeric;
+        private System.Windows.Forms.Label label9;
     }
 }
 
